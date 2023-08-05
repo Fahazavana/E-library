@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+{% endblock %}
+
+
+{% block body %}
+<h1>Library</h1>
+<h2>Update book: {{book.title}}</h2>
+<form action="/update/{{book.id}}" method="POST" enctype="multipart/form-data" accept="pdf">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    <label class="d-block" for="title">Tilte</label>
+    <input class="d-block" type="text" name="title" value="{{book.title}}">
+    <label for="author">Author</label>
+    <input class="d-block" type="text" name="author" value="{{book.author}}">
+    <label class="d-block" for="year">Year</label>
+    <input class="d-block" type="year" name="year" value="{{book.year}}">
+    <input type="file" name="file" />
+    <input type="submit" value="Update" />
+</form>
+{% endblock%}

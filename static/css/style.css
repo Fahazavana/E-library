@@ -1,10 +1,59 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+
+  padding: 0;
 }
-.d-block{
-    display: block;
+
+.d-block {
+  display: block;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: calc(100%-200px);
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.btn{
+    width: 50px;
+    display:inline-block;
+    border: 1px solid gray;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+    margin: 2px 5px;
+    color: white;
+    border-radius: 2px;
+}
+
+.action{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.primary{
+    background-color: blue;
+}
+
+.secondary{
+    background-color: green;
+}
+
+.danger{
+    background-color: red;
 }
