@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}
+{% endblock %}
+
+
+{% block body %}
+<h1>Library</h1>
+<h2>Add new book</h2>
+<form action="/addbook" method="POST" enctype="multipart/form-data" accept="pdf">
+    <input class="d-blocK" type="text" name="title">
+    <input class="d-blocK" type="text" name="author">
+    <input class="d-blocK" type="year" name="year">
+    <input class="d-blocK" type="file" name="file" />
+    <input class="d-blocK" type="submit" value="Upload"/>
+</form>
+<h2>Book list</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Added on</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+    </tr>
+    {% for book in books%}
+    <tr>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock%}
